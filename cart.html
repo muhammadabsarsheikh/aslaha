@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MY-Cart</title>
+</head>
+<body>
+
+    <header>
+        <div class="navbar" >
+
+            <div class="nav-logo border" onclick="window.location.href='index.html';">
+                <div class="logo"></div>
+            </div>
+        
+            <div class="nav-slogan border">
+                <p class="slog-1">Pakistan's Most Trusted</p>
+                <div class="add-icon">
+                    <!-- <i class="fa-solid fa-gun"></i> -->
+                    <i class="fa-solid fa-store"></i>
+                    <p class="slog-2">Firearms Shop</p>
+                </div>
+            </div>
+
+            <div class="nav-search">
+                <select name="type" class="search-select">
+                    <option value="3">All</option>
+                    <option value="4">Rilfles</option>
+                </select>
+                <input type="text" placeholder="Search Products" class="search-input">
+                <div class="search-icon"><i class="fa-solid fa-magnifying-glass" class="icon" href="#"></i></div>
+            </div>
+
+        <div class="nav-signin border" id="user-signin" onclick="window.location.href='account.html'">
+            <i class="fa-regular fa-user" id="user-logo"></i>
+            <p class="nav-hello">Hello, sign in</p>
+            <div class="nav-account">
+                <p class="nav-line">Account & Listing</p>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+        </div>
+
+        <div class="nav-cart border" onclick="window.location.href='cart.html'";>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <div class="cart-product"></div>
+            cart</a>
+
+        </div>
+
+        
+        </div>
+
+
+    
+    </header>
+    <!-- <div class="cart-content">
+        <div class="products">
+            <div class="product-1 prod"></div>
+            <div class="product-2 prod"></div>
+            <div class="product-3 prod"></div>
+            <div class="product-4 prod"></div>
+        
+        </div>    
+        </div>
+
+
+
+
+        <div class="bill"></div>
+    </div> -->
+
+    <div class="cart-content">
+        
+        <div class="products">
+
+            <div class="my-cart">MY CART</div>
+
+          <div class="product-item"> 
+                <div class="p-image" style="background-image: url(Products\ Shots/dragunov.png);"></div>
+                 <div class="p-details">
+                      <p class="p-title">KALASHINKOV</p>
+                     <div class="p-quantity"> 
+                            <i class="fa-solid fa-plus quantity-icon"></i>
+                         <div class="quantity-number">2</div>
+                         <i class="fa-solid fa-minus quantity-icon"></i>
+                     </div>
+                 </div>           
+                    <i class="fa-solid fa-circle-xmark p-cross"></i>
+                      <div class="p-price">
+                    <p class="price-discount">$20.00</p>
+                    <p class="price-after-discount">$20.00</p>
+                 </div>
+          </div>
+
+
+          <div class="product-item"> 
+            <div class="p-image" style="background-image: url(Products\ Shots/dragunov.png);"></div>
+             <div class="p-details">
+                  <p class="p-title">KALASHINKOV</p>
+                 <div class="p-quantity"> 
+                        <i class="fa-solid fa-plus quantity-icon"></i>
+                     <div class="quantity-number">2</div>
+                     <i class="fa-solid fa-minus quantity-icon"></i>
+                 </div>
+             </div>           
+                <i class="fa-solid fa-circle-xmark p-cross"></i>
+                  <div class="p-price">
+                <p class="price-discount">$20.00</p>
+                <p class="price-after-discount">$20.00</p>
+             </div>
+      </div>
+
+
+
+        </div>
+
+
+        <div class="bill">
+          <div class="bill-content">
+              <h3>Summary</h3>
+                <div class="bill-charges">
+                    <div class="bill-sub-total bill-row">
+                        <span>Sub-total</span>
+                         <span>$10.00</span>
+                    </div>
+                    <div class="bill-discount bill-row">
+                         <span>Product 1</span>
+                          <span>$10.00</span>
+                    </div>
+                    <div class="bill-shipping bill-row">
+                          <span>Shipping & Handling</span>
+                         <span>$10.00</span>
+                    </div>
+                    <div class="total bill-row">
+                        <span>Total Price</span>
+                        <span>$30.00</span>
+                    </div>
+                </div>
+
+                <div class="total-price bill-row">
+                    <span>Balance</span>
+                    <span>$3400.00</span>
+                </div>
+
+                <div class="bill-check-out">Check Out</div>
+
+                <div class="bill-notes">Your Items will be delivered to your location, in 2 Months. You will only recive the package if you show your Gun Licence</div>
+
+          </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="foot-return"><a href="index.html">Back to Top</a></div>
+        <div class="foot-social">
+            <i class="fa-solid fa-copyright" ></i>
+            <p>Static Website Design For ICT Project</p>
+        </div>
+    </footer>
+    
+    <script>window.addEventListener("DOMContentLoaded", function() {
+        var cartNumber = Number(localStorage.getItem("cartN")) || 0; // Retrieve the cart number from localStorage
+        document.querySelector(".cart-product").innerText = cartNumber; // Display the cart number in the element
+    });</script>
+
+
+</body>
+</html>
